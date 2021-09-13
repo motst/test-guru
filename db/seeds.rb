@@ -29,14 +29,23 @@ questions = Question.create! ([
   { body: 'What was the name of the bulldog in the cartoon "Tom and Jerry"', test_id: tests[2].id }
 ])
 answers = Answer.create! ([
-  { body: '75 percent', correct: true, question_id: questions[0].id },
-  { body: '45 percent', correct: false, question_id: questions[0].id },
-  { body: 'Pur, pur', correct: true, question_id: questions[1].id },
-  { body: 'Mau, mau', correct: false, question_id: questions[1].id },
-  { body: 'Belka and Strelka', correct: true, question_id: questions[2].id },
-  { body: 'Zhuchka and Grelka', correct: false, question_id: questions[2].id },
-  { body: 'Teftels', correct: true, question_id: questions[3].id },
-  { body: 'Honey', correct: false, question_id: questions[3].id },
-  { body: 'Spike', correct: true, question_id: questions[4].id },
-  { body: 'Rust', correct: false, question_id: questions[4].id }
+  { title: '75 percent', correct: true, question_id: questions[0].id },
+  { title: '45 percent', correct: false, question_id: questions[0].id },
+  { title: 'Pur, pur', correct: true, question_id: questions[1].id },
+  { title: 'Mau, mau', correct: false, question_id: questions[1].id },
+  { title: 'Belka and Strelka', correct: true, question_id: questions[2].id },
+  { title: 'Zhuchka and Grelka', correct: false, question_id: questions[2].id },
+  { title: 'Teftels', correct: true, question_id: questions[3].id },
+  { title: 'Honey', correct: false, question_id: questions[3].id },
+  { title: 'Spike', correct: true, question_id: questions[4].id },
+  { title: 'Rust', correct: false, question_id: questions[4].id }
+])
+user_tests = UserTest.create! ([
+  { user_id: users[0].id, test_id: tests[0].id },
+  { user_id: users[0].id, test_id: tests[1].id },
+  { user_id: users[0].id, test_id: tests[2].id },
+  { user_id: users[0].id, test_id: tests[3].id },
+  { user_id: users[0].id, test_id: tests[4].id },
+  { user_id: users[1].id, test_id: tests[0].id },
+  { user_id: users[1].id, test_id: tests[1].id },
 ])
